@@ -6,7 +6,9 @@ object ImplicitParamsExample extends App {
 //  this would cause ambiquous error as we have two same vals
 //  implicit val context3 = Context[Int]("int1")
   val context4 = Context[Int]("int2")
+  var context5 = Context[Int]("int3")
   printContextString(1)
+  printContextString(1)(context5)
 
   case class Context[T](contextString: String)
 //  case class Context()
